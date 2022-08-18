@@ -1,0 +1,49 @@
+.welcome{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    min-height: 80vh;
+    /* background-color: bisque; */
+    background-image: url(https://s1.1zoom.me/b5050/852/362769-admin_1920x1080.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+button{
+    /* width: 80px;
+    height: 80px; */
+    background-color: #f4511e;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    opacity: 0.8;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+button:hover{
+    opacity: 1;
+}
+
+.slogan{
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgba(255, 255, 255, 0.274);
+    padding: 1rem;
+}
+
+h1{
+    font-style: italic;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.274);
+    padding: 1rem;
+}
