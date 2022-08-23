@@ -1,10 +1,12 @@
 import SitioWebLayout from '../layouts/SitioWebLayout';
+import EventCarousel from '../componentes/EventCarousel';
+import '../styles/carousel.css'
 
-export default function UnderConstruction () {
+export default function Cities () {
     return (
         <div>
             <SitioWebLayout>
-                <h2>Under Construction</h2>
+                <EventCarousel />
             </SitioWebLayout>
         </div>
     )
