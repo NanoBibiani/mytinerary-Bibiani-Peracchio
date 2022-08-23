@@ -1,6 +1,6 @@
 .Header{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     width: 100%;
     height: 30vh;
@@ -8,7 +8,6 @@
 }
 
 .logoViaje{
-    width: 80px;
-    height: 80px;
-    border-radius: 360px;
+    width: 150px;
+    height: 150px;
 }
