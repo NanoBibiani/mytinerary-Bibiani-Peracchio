@@ -9,20 +9,43 @@ import '../styles/footer.css'
 import '../styles/welcome.css'
 import '../styles/header.css'
 import '../styles/carousel.css'
+import {BrowserRouter, Routes , Route} from 'react-router-dom'
+import UnderConstruction from '../componentes/UnderConstruction';
+import ShowCities from '../componentes/ShowCities';
 
 function App() {
   return (
     <div className="App">
-      <Cities />
+
+
+      <>
+        <BrowserRouter>
+        <SitioWebLayout>
+
+          <Routes>
+
+              <Route path='/' element={<HomePage/>}/>
+              <Route path='/welcome' element={<Welcome/>}/>
+              <Route path='/cities' element={<Cities/>}/>
+              <Route path='/showcities' element={<ShowCities/>}/>
+              <Route path='/*' element={<UnderConstruction/>}/>
+
+        
+          </Routes>
+
+        </SitioWebLayout>
+        </BrowserRouter>
+
+      </>
       
 
 
       {/* <EventCarousel/> */}
       {/* <SitioWebLayout /> */}
-      {/* <HomePage /> */}
+      {/*  */}
       {/* <Header />
       <Footer /> */}
-     {/*  <Welcome />
+     {/*  
      <Footer /> */}
     </div>
   );

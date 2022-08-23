@@ -40,3 +40,15 @@ height: 180px;
             .slide>button:hover{
                 opacity: 1;
             }
+
+
+        /* button para mostrar ciudades*/
+        #buttonShow{
+            align-self: center;
+            margin-left: 42%;
+            color:aqua;
+            width :10%;
+           float: inherit;
+            
+
+        }
