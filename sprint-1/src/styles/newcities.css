@@ -1,0 +1,27 @@
+.newcities{
+    min-height: 50vh;
+
+}
+.inpF{
+    display: flex;
+    float:right;
+    width: 30%;
+}
+.inputsearch{
+    width: 80%;
+    
+}
+.buttonSearch{
+    cursor: pointer;
+}
+
+@media (max-width: 600px){
+    .inpF{
+        display: flex;
+        float:right;
+        width: 50%;
+    }
+}
+
+
+

@@ -9,6 +9,9 @@ import '../styles/footer.css'
 import '../styles/welcome.css'
 import '../styles/header.css'
 import '../styles/carousel.css'
+import '../styles/home.css'
+import '../styles/showcities.css'
+import '../styles/newcities.css'
 import {BrowserRouter, Routes , Route} from 'react-router-dom'
 import UnderConstruction from '../componentes/UnderConstruction';
 import ShowCities from '../componentes/ShowCities';
@@ -42,13 +45,7 @@ function App() {
       
 
 
-      {/* <EventCarousel/> */}
-      {/* <SitioWebLayout /> */}
-      {/*  */}
-      {/* <Header />
-      <Footer /> */}
-     {/*  
-     <Footer /> */}
+
     </div>
   );
 }

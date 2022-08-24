@@ -5,22 +5,32 @@
     align-items: center;
     width: 100%;
     height: 20vh;
-    background-color: black;
+    background-color: rgba(34, 55, 42, 0.863);
     color: white;
 }
 
 .socialMedia{
     display: flex;
     flex-direction: column;
+    font-style: italic;
 }
 
 .socialMedia1{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    font-style: italic;
 }
 
 a{
     color: white;
     text-decoration: none;
+    font-style: italic;
+}
+.top{
+    align-self: center;
+    color:rgb(255, 88, 42); ;
+    border-radius:10px;
+    outline:none;
+    
 }
