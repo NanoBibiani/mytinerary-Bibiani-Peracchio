@@ -7,7 +7,13 @@
     background-color: orangered;
 }
 
+.Header-link{ 
+    color: black;
+    padding: 1rem;
+} /* opcion para estilar links? */
+
+
 .logoViaje{
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
 }
