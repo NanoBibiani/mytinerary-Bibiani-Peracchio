@@ -1,9 +1,9 @@
-import Footer from '../componentes/Footer';
+
 import Welcome from '../componentes/Welcome';
-import Header from '../componentes/Header';
+
 import SitioWebLayout from '../layouts/SitioWebLayout';
 import HomePage from './HomePage';
-import EventCarousel from '../componentes/EventCarousel'
+
 import Cities from './Cities';
 import '../styles/footer.css'
 import '../styles/welcome.css'
@@ -12,6 +12,7 @@ import '../styles/carousel.css'
 import {BrowserRouter, Routes , Route} from 'react-router-dom'
 import UnderConstruction from '../componentes/UnderConstruction';
 import ShowCities from '../componentes/ShowCities';
+import NewCities from '../componentes/NewCities';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
               <Route path='/welcome' element={<Welcome/>}/>
               <Route path='/cities' element={<Cities/>}/>
               <Route path='/showcities' element={<ShowCities/>}/>
+              <Route path='/newcities' element={<NewCities/>}/>
               <Route path='/*' element={<UnderConstruction/>}/>
 
         
