@@ -26,21 +26,25 @@ export default function Header() {
 
     return (
         <div className="Header">
-            <div>
+            <div className='logos'>
               <img className = "logoViaje" src="http://localhost:3000/logosinfondo.png" alt="Logo"></img>
+              <h2 className='logoh2'>JONAS</h2>
             </div>
             <div> 
                 {
                     open
-                        ? <ul>
+                        ? <ul className='ulNav'>
                             <li><a href="#">Profile</a></li>
                             <li><a href="#">Log In</a></li>
                         </ul>
                         : null
                 }
             </div>
+            <div className='navigator'>
             {pages.map(link)}
-            <button onClick={handleOpenMenu}>Menu</button>
+            <a href='#' onClick={handleOpenMenu} className='Header-link'>Menu</a>
+
+            </div>
         </div>
     )
 }

@@ -6,8 +6,10 @@ export default function(prop){
     //}
     // let Allcities = prop.cities  
     return(
-        <>
-        <h1>Cities</h1>
-        </>
+        <div className="showcities">
+            <h1>Cities</h1>
+
+        </div>
+        
     )
 }
