@@ -7,6 +7,11 @@
     justify-content: center;
     align-items: center;
 }
+.ContainerCard{
+    display: flex;
+    flex-direction: row;
+    gap:5px
+}
 
 .card{
     border-radius: 10px;
