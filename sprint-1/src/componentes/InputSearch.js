@@ -33,6 +33,12 @@ export default function InputSearch(prop){
     </div>
 
     )
+    let error = <div className="ErrorCities">
+        <h4>Im sorry , we dont have that city</h4>
+        <img src="https://cdn.dribbble.com/users/760295/screenshots/4433975/media/03494b209a1511a61868ced337b97931.png?compress=1&resize=400x300"/> 
+        <p>please write us for more information over other destinies</p>
+
+    </div>
 
     
         console.log(Combinacion)
@@ -47,6 +53,7 @@ export default function InputSearch(prop){
         </form>
         <div className="ContainerCard">
         { show!='' ?arr.filter((e) => e.city.includes(show)).map(cityShow):''}
+        {show!='' && arr.filter((e)=>e.city.includes(show))==false?error:''}
         </div>
         </div>
         
