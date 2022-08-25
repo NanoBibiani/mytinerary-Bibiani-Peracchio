@@ -1,10 +1,11 @@
 import { useState } from 'react'
 import { Link as LinkRouter } from 'react-router-dom'
+import Login from './Login'
 import '../styles/header.css'
 
 
 const pages = [
-    {name: 'Home', to: '/'},
+    {name: 'Home', to: '/home'},
     {name: 'Cities', to: '/cities'},
     {name: 'New Cities', to: '/newcities'},
     /* {name: 'Contact', to: '/contact'}, */ // pagina de contaacto suma?
@@ -23,29 +24,31 @@ export default function Header() {
         }
     }
 
-
     return (
         <div className="Header">
-            <div className='logos'>
+            <div>
               <img className = "logoViaje" src="http://localhost:3000/logosinfondo.png" alt="Logo"></img>
-              <h2 className='logoh2'>JONAS</h2>
+              {/* <h2>JONAS</h2> */}
             </div>
-            <div> 
+            <div className='Maping'>
+            {pages.map(link)}
+            </div>
+
+
+
+            {/* menu hamburguesa */}
+            <div className="Burger">
+            <button className='ButtonBurger' onClick={handleOpenMenu}>☰</button>
+             <div className='ContenedorBurger'> 
                 {
                     open
-                        ? <ul className='ulNav'>
-                            <li><a href="#">Profile</a></li>
-                            <li><a href="#">Log In</a></li>
+                        ? <ul className='LinkBurger'>
+                             <li>{pages.map(link)}</li>
                         </ul>
                         : null
                 }
             </div>
-            <div className='navigator'>
-            {pages.map(link)}
-            <a href='#' onClick={handleOpenMenu} className='Header-link'>Menu</a>
-
-            </div>
+        </div>
         </div>
     )
 }
- 
