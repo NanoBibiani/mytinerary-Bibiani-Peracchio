@@ -21,6 +21,13 @@
         width: 50%;
     }
 }
+.ErrorCities{
+    display: flex;
+    flex-direction: column;
+    font-style: italic;
+    justify-content: center;
+    align-items: center;
+}
 
 
 
