@@ -24,12 +24,12 @@ function App() {
 
       <>
         <BrowserRouter>
-        <SitioWebLayout>
 
+          <SitioWebLayout>
           <Routes>
 
-              <Route path='/' element={<HomePage/>}/>
-              <Route path='/welcome' element={<Welcome/>}/>
+              <Route path='/home' element={<HomePage/>}/>
+              <Route path='/' element={<Welcome/>}/>
               <Route path='/cities' element={<Cities/>}/>
               <Route path='/showcities' element={<ShowCities/>}/>
               <Route path='/newcities' element={<NewCities/>}/>
@@ -37,8 +37,8 @@ function App() {
 
         
           </Routes>
+          </SitioWebLayout>
 
-        </SitioWebLayout>
         </BrowserRouter>
 
       </>
