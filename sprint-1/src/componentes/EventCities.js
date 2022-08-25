@@ -1,6 +1,8 @@
-import InputSearch from "./InputSearch"
+import CitiesCards from "./CitiesCards"
+import Cities from "./CitiesCards"
 
-export default function EventInput(){
+
+export default function EventCarousel(){
     const elem = [
         {
             img:"https://cdn.pixabay.com/photo/2017/01/28/02/24/japan-2014619_960_720.jpg",
@@ -51,10 +53,12 @@ export default function EventInput(){
             city:"Miami"
         }
     ]
-
+    
     return(
-        <InputSearch datas={elem}/>
+        <div>
+            <CitiesCards data={elem}/>
+    
+        </div>
     )
-
-}
-
+    
+    }
