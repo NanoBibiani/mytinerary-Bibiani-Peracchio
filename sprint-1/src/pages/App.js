@@ -12,6 +12,7 @@ import '../styles/carousel.css'
 import '../styles/home.css'
 import '../styles/showcities.css'
 import '../styles/newcities.css'
+import '../styles/sigleCard.css'
 import {BrowserRouter, Routes , Route} from 'react-router-dom'
 import UnderConstruction from '../componentes/UnderConstruction';
 import ShowCities from '../componentes/ShowCities';

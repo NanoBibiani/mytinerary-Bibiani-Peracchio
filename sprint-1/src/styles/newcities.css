@@ -1,14 +1,13 @@
-.newcities{
-    min-height: 50vh;
 
-}
 .inpF{
     display: flex;
-    float:right;
+    align-self: flex-end;
     width: 30%;
+    margin-top: 20px;
 }
 .inputsearch{
     width: 80%;
+    float: right;
     
 }
 .buttonSearch{

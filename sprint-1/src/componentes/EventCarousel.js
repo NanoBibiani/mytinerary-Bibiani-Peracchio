@@ -11,7 +11,7 @@ const elem = [
     },
     {
         img:"https://cdn.pixabay.com/photo/2016/11/23/15/32/pedestrians-1853552_960_720.jpg",
-        city:"New York"
+        city:"New york"
     },
     {
         img:"https://cdn.pixabay.com/photo/2017/06/15/18/57/journey-2406354_960_720.jpg",
@@ -54,6 +54,7 @@ const elem = [
 return(
     <div>
         <Carousel data={elem}/>
+
     </div>
 )
 
