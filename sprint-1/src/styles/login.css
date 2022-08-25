@@ -1,0 +1,44 @@
+.Login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: black;
+    color: orangered;
+}
+
+.Usuario{
+    height: 50px;
+    width: 50px;
+}
+
+.Desplegable{
+    display: flex;
+}
+
+.Sesion{
+    /* display: flex;
+    align-content: center;
+    border-radius: 50px; */
+    background-color: #f4511e;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    opacity: 0.8;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.Sesion:hover{
+    opacity: 1;
+}
+
+.Profile{
+    margin-right: 5.5vh;
+}
