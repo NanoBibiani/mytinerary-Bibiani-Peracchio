@@ -17,7 +17,7 @@ import {BrowserRouter, Routes , Route} from 'react-router-dom'
 import UnderConstruction from '../componentes/UnderConstruction';
 import ShowCities from '../componentes/ShowCities';
 import NewCities from '../componentes/NewCities';
-
+import NotFound from '../componentes/NotFound';
 function App() {
   return (
     <div className="App">
@@ -34,8 +34,8 @@ function App() {
               <Route path='/cities' element={<Cities/>}/>
               <Route path='/showcities' element={<ShowCities/>}/>
               <Route path='/newcities' element={<NewCities/>}/>
-              <Route path='/*' element={<UnderConstruction/>}/>
-
+              <Route path='/under' element={<UnderConstruction/>}/>
+              <Route path='/*' element={<NotFound/>}/>
         
           </Routes>
           </SitioWebLayout>

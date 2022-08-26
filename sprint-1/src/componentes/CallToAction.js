@@ -6,9 +6,9 @@ let TextButon = prop.TextButon
 let Clases = prop.Clases
 let ides = prop.ides
     return(
-        <>
+    
        <LinkRouter className = {Clases} id={ides} to={linkTo}>{TextButon.toUpperCase()}</LinkRouter>
-        </>
+        
     )
 
 }
