@@ -1,0 +1,59 @@
+.newcities{
+    height:90vh;
+}
+
+.ContainerElem{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.ContainerCard{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap:5px;
+
+}
+
+.card{
+display: flex ;
+flex-direction: column;
+width: 200px;
+border-radius: 10px;
+    background-color:rgb(242, 246, 53) ;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.336);
+}
+.imgCard1{
+border-radius: 10px;
+width: 100%;
+height: 180px;
+}
+.bodyCard{
+text-align: center;
+    height: 100%;
+}
+.titleCard{
+
+font-style: italic;
+
+}
+.pCard{
+
+    font-style: italic;
+}
+.priceCard{
+
+    color: black;
+    
+}
+@media (max-width: 600px){
+  .card{
+    margin-top: 90px;
+    width: 100%;
+    height: 40%;
+  }  
+  
+
+}

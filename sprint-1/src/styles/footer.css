@@ -1,0 +1,35 @@
+.Footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 30vh;
+    background-color: rgba(34, 55, 42, 0.863);
+    color: white;
+}
+.dated{
+    text-align: center;
+}
+.socialMedia{
+    display: flex;
+    flex-direction: column;
+    font-style: italic;
+    align-items: center;
+}
+
+
+
+a{
+    color: white;
+    text-decoration: none;
+    font-style: italic;
+}
+.top{
+    display: flex;
+    align-self: center;
+    color:rgb(255, 88, 42); ;
+    border-radius:10px;
+    outline:none;
+    
+}

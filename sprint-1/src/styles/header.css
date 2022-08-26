@@ -1,0 +1,108 @@
+.Header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 30vh;
+    background-color: rgb(255, 88, 42);
+    position: relative;
+}
+
+.Header-link{
+    padding: 1rem;
+    opacity: 0.8;
+    font-size: 20px;
+    font-weight: 300px;
+    color: #f2e5e5;
+    text-shadow: 0px 0px 5px #b393d3, 0px 0px 10px #d5972c, 0px 0px 10px #d3a593,
+      0px 0px 20px #d3a593;
+}
+.Header-link:hover{
+    opacity: 1;
+}
+
+
+.navigator{
+    display: flex;
+    flex-grow: 2;
+}
+.ulNav{
+    display: flex;
+    opacity: 0.8;
+    flex-direction: row;
+    margin-right: 50px;
+    gap: 19px;
+    list-style-type: none;
+}
+.ulNav:hover{
+    opacity: 1;
+}
+
+.logoViaje{
+    width: 150px;
+    height: 150px;
+}
+.logos{
+    display: flex;
+    flex-grow: 2;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    margin-left: 5%;
+
+}
+.logoh2{
+ 
+
+    font-size: 25px;
+    font-weight: 300px;
+    color: #4b0202;
+    text-shadow: 0px 0px 5px #b393d3, 0px 0px 10px #d5972c, 0px 0px 10px #d3a593,
+      0px 0px 20px #d3a593;
+}
+
+.ButtonBurger{
+    background-color: #f4511e;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    opacity: 0.8;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.ButtonBurger:hover{
+    opacity: 1;
+}
+
+.LinkBurger{
+    list-style: none;
+}
+
+
+@media (max-width: 425px){
+    .Maping{
+        display: none;
+    }
+
+    .Header-link{
+        font-size: 12px;
+    }
+
+    .logoViaje{
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (min-width: 700px){
+    .Burger{
+        display: none;
+    }
+}
