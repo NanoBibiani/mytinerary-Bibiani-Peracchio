@@ -1,5 +1,10 @@
 import { Link as LinkRouter } from "react-router-dom"
 export default function Footer () {
+  const currentDate = new Date().toLocaleString()
+
+  console.log(currentDate)
+
+
   let goTop=()=>{
     window.scrollTo({
       top:0,
@@ -11,6 +16,7 @@ export default function Footer () {
           <LinkRouter to='/home' className="icons" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M3 13h1v7c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2v-7h1a1 1 0 0 0 .707-1.707l-9-9a.999.999 0 0 0-1.414 0l-9 9A1 1 0 0 0 3 13zm9-8.586 6 6V15l.001 5H6v-9.586l6-6z"/><path d="M12 18c3.703 0 4.901-3.539 4.95-3.689l-1.9-.621c-.008.023-.781 2.31-3.05 2.31-2.238 0-3.02-2.221-3.051-2.316l-1.899.627C7.099 14.461 8.297 18 12 18z"/></svg></LinkRouter>
             <div className = "socialMedia">
                 <a className="top" href="#" onClick={goTop}>Go top</a>
+                <p className="dated">{currentDate.slice(0,9)}</p>
               <h3>You can also follow us social media</h3>
                 <div className = "socialMedia1">
                  <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M13.397 20.997v-8.196h2.765l.411-3.209h-3.176V7.548c0-.926.258-1.56 1.587-1.56h1.684V3.127A22.336 22.336 0 0 0 14.201 3c-2.444 0-4.122 1.492-4.122 4.231v2.355H7.332v3.209h2.753v8.202h3.312z"/></svg></a>

@@ -3,8 +3,8 @@
 export default function Carousel(prop){
     
     const arr = prop.data
-    const [start , setStart]= useState([0])
-    const [range , setRange]= useState([4])
+    const [start , setStart]= useState([0]) //AGREGAR PROPS PARA MODIFICAR ESTADO DESDE COMPONENTE
+    const [range , setRange]= useState([4]) //AGREGAR PROPS PARA MODIFICAR ESTADO DESDE COMPONENTE
 
 
     const ItemShow =(item)=>(    
