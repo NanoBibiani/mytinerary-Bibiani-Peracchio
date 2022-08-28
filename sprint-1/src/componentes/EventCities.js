@@ -1,12 +1,14 @@
 import CitiesCards from "./CitiesCards"
-import Cities from "./CitiesCards"
 
 
-export default function EventCarousel(){
+
+export default function EventCities(){
+ 
     const elem = [
         {
             img:"https://cdn.pixabay.com/photo/2017/01/28/02/24/japan-2014619_960_720.jpg",
-            city: "Osaka"
+            city: "Osaka",
+            
         },
         {
             img:"https://cdn.pixabay.com/photo/2014/08/08/21/02/iceland-413700_960_720.jpg",
@@ -57,7 +59,7 @@ export default function EventCarousel(){
     return(
         <div>
             <CitiesCards data={elem}/>
-    
+            
         </div>
     )
     

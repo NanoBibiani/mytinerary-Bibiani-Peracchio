@@ -1,47 +1,50 @@
 .newcities{
-    height:80vh;
+    height:90vh;
 }
+
 .ContainerElem{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
 }
 .ContainerCard{
     display: flex;
     flex-direction: row;
-    gap:5px
+    justify-content: space-around;
+    gap:5px;
+
 }
 
 .card{
-    border-radius: 10px;
-    margin-top: 10%;
-    width: 250px;
-    height: 360px;
+display: flex ;
+flex-direction: column;
+width: 200px;
+border-radius: 10px;
     background-color:rgb(242, 246, 53) ;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.336);
 }
-.imgCard{
-    border-radius: 10px;
+.imgCard1{
+border-radius: 10px;
 width: 100%;
-height: 190px;
+height: 180px;
 }
 .bodyCard{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+text-align: center;
+    height: 100%;
 }
 .titleCard{
-display: flex;
+
 font-style: italic;
-font-size: large;
+
 }
 .pCard{
-    display: flex;
+
     font-style: italic;
 }
 .priceCard{
-    display: flex;
+
     color: black;
     
 }
