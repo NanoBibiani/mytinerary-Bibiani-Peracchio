@@ -2,7 +2,7 @@ import React from 'react';
 import CallToAction from './CallToAction';
 export default function CitiesCards(prop){
     let arr = prop.data
-    let link = prop.link
+  
         let cityShow =(cities)=>(
             <div className="card">
             <div className="imgCard">
@@ -13,7 +13,7 @@ export default function CitiesCards(prop){
                 <h4 className="titleCard">{cities.city}</h4>
                 <p className="pCard">its a good idea</p>
                 <p className="priceCard">$500</p>
-                     <CallToAction linkTo='/notfound' TextButon="Buy" Clases="buttonBuy"/>
+                     <CallToAction linkTo={`/details?${cities.id}`} TextButon="Details" Clases="buttonBuy"/>
             </div>
         </div>
     

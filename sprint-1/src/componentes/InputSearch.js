@@ -22,23 +22,23 @@ export default function InputSearch(prop){
     }
    
     //funcion para render con map/////////////////////////////////////////////////
-    let cityShow =(city)=>(
-        <div className="card">
-        <div className="imgCard">
-        <img className="imgCard1" src={city.img}></img>
+        let cityShow =(city)=>(
+            <div className="card">
+            <div className="imgCard">
+            <img className="imgCard1" src={city.img}></img>
 
+            </div>
+            <div className="bodyCard">
+                <h4 className="titleCard">{city.city}</h4>
+                <p className="pCard">its a good idea</p>
+                <p className="priceCard">$500</p>
+                <CallToAction linkTo={`/details?${city.id}`} TextButon="Details" Clases="buttonBuy"/>
+            </div>
         </div>
-        <div className="bodyCard">
-            <h4 className="titleCard">{city.city}</h4>
-            <p className="pCard">its a good idea</p>
-            <p className="priceCard">$500</p>
-                 <CallToAction linkTo='/notfound' TextButon="Buy" Clases="buttonBuy"/>
-        </div>
-    </div>
 
     )
-    let error = <div className="ErrorCities">//////////////////////page notfound ///////////////////////////
-        <h4>Im sorry , we dont have that city</h4>
+    let error = <div className="ErrorCities">
+                <h4>Im sorry , we dont have that city</h4>
         <img src="https://cdn.dribbble.com/users/760295/screenshots/4433975/media/03494b209a1511a61868ced337b97931.png?compress=1&resize=400x300"/> 
         <p>please write us for more information over other destinies</p>
 
