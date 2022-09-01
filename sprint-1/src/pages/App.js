@@ -23,6 +23,7 @@ import NotFound from '../componentes/NotFound';
 import FormCities from '../componentes/FormCities';
 import Details from '../componentes/Details';
 import ShowDetails from '../componentes/ShowDetails';
+import FormCity from '../componentes/FormCity';
 function App() {
   return (
     <div className="App">
@@ -42,6 +43,7 @@ function App() {
               <Route path='/under' element={<UnderConstruction/>}/>
               <Route path='/createcity' element={<FormCities/>}/>
               <Route path='/details' element={<ShowDetails/>}/>
+              <Route path='/created' element={<FormCity/>}/>
                      
               <Route path='/*' element={<NotFound/>}/>
         

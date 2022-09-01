@@ -1,14 +1,16 @@
+
 import { useState,useRef } from "react"
 import FormCity from "./FormCity"
 export default function Formcities(){
     const[img,setImg]=useState()
     const [city,setCity] = useState()
-    const [description,setDescription]=useState()
-    const [price,setPrice]=useState()
+    const [population,setPopulation]=useState()
+    const [funded,setFunded]=useState()
+    const [Country,setCountry]=useState()
     const [obj,setObj]=useState()
     const [submit,setSubmit]=useState(false)
     const inputElement = useRef();
-    const inputPrice = useRef()
+    const inputFunded = useRef()
     const inputURL = useRef()
 const handleImg =(e)=>{
 
@@ -25,44 +27,55 @@ const handleCity =(e)=>{
 setCity(Combinacion)
 
 }
-const handleDescription = (e)=>{
-    if(e.target.value)
+const handlePopulation = (e)=>{
+    let pop = parseInt(e.target.value)
+    if(Number(pop)){
+        setPopulation(pop)
+        
+    }else{
+        inputFunded.current.value=''
+        alert("the price need be a number")
+    }
     
-setDescription(e.target.value)
   
 
 }
-const handlePrice = (e)=>{
+const handleFunded = (e)=>{
     let num = parseInt(e.target.value)
     if(Number(num)){
-        setPrice(num)
+        setFunded(num)
         
     }else{
-        inputPrice.current.value=''
+        inputFunded.current.value=''
         alert("the price need be a number")
     }
 
 
 }
-const handleSubmit = (e)=>{
+
+const handleCountry=(e)=>{
+    setCountry(e.target.value)
+}
+console.log(inputElement)
+const HandleSubmit = (e)=>{
     e.preventDefault()
     let url;
     try{
         url=new URL(img)
-        if(description!=undefined && city!=undefined && price != undefined &&url.protocol === "http:" || url.protocol === "https:"||url.protocol === "data:"){
+        if(population!=undefined && city!=undefined &&Country!=undefined&& funded != undefined &&url.protocol === "http:" || url.protocol === "https:"||url.protocol === "data:"){
             inputElement.current.reset()
-            const card = [{
-                id: Math.random(),
-                img:img,
+            const card = {
+                photo:img,
                 city:city,
-                description:description,
-                price:price
+                population:population,
+                fundation:funded,
+                country:Country
     
-            }]
+            }
             console.log(card)
             setSubmit(true)
             setObj(card)
-            
+          
             
             
         }
@@ -70,9 +83,11 @@ const handleSubmit = (e)=>{
         alert("that url its invalid")
         console.log(inputURL.current)
     }
- 
-
 }
+
+
+
+
 
 
     return(
@@ -80,21 +95,23 @@ const handleSubmit = (e)=>{
         <>
             { !submit?
 
-                <form ref={inputElement} className="formCity" onSubmit={handleSubmit}>
+                <form ref={inputElement} className="formCity" onSubmit={HandleSubmit} method="POST">
                     
-                    <p>Ingrese el link de la Imagen</p>
+                    <p>put the link of your image</p>
                     <input type="text" rel={inputURL}className="feedback-input" onChange={handleImg} ></input>
-                    <p>Ingrese el nombre de la ciudad</p>
+                    <p>Write the  City</p>
                     <input type="text"className="feedback-input" onChange={handleCity}  ></input>
-                    <p>Ingrese una descripcion</p>
-                    <input type="text"className="feedback-input" onChange={handleDescription}  ></input>
-                    <p>Ingrese el Precio</p>
-                    <input type="text" ref={inputPrice} className="feedback-input" onChange={handlePrice}  ></input>
-                    <button type="submit">Create City</button>
+                    <p>Write the Country</p>
+                    <input type="text"className="feedback-input" onChange={handleCountry}  ></input>
+                    <p>write a population</p>
+                    <input type="text"className="feedback-input" onChange={handlePopulation}  ></input>
+                    <p>write the year of funded</p>
+                    <input type="text" ref={inputFunded} className="feedback-input" onChange={handleFunded}  ></input>
+                    <button type="submit" linkTo={`/created`}>Create City</button>
                     
                 </form>
                 :<>
-                <FormCity obj={obj}/> 
+                <FormCity data={obj}/>
                 
                 </> 
                    

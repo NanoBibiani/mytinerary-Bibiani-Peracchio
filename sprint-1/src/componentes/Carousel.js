@@ -3,13 +3,14 @@
 export default function Carousel(prop){
     
     const arr = prop.data
+    console.log(prop)
     const [start , setStart]= useState([0]) //AGREGAR PROPS PARA MODIFICAR ESTADO DESDE COMPONENTE
     const [range , setRange]= useState([4]) //AGREGAR PROPS PARA MODIFICAR ESTADO DESDE COMPONENTE
 
 
     const ItemShow =(item)=>(    
     <div>
-         <img src={item.img}></img>
+         <img src={item.photo}></img>
          <p>{item.city}</p>
      </div>  
 )
@@ -48,11 +49,12 @@ const prev = ()=>{
 }
   
     return(
-        <div className ="slide">
+            <div className="popularCities"><h1 >Popular Cities</h1>
+            <div className ="slide">
                 <button className="prev" onClick={prev}> Prev </button>
                 {arr.slice(start,range).map(ItemShow)}
                 <button className="next" onClick={next}>Next</button>
             </div>
-    
+            </div>
     )
 }
