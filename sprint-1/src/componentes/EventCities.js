@@ -1,14 +1,15 @@
 import axios from "axios"
 import { useState } from "react"
 import CitiesCards from "./CitiesCards"
+import Details from "./Details"
+import axios from "axios"
+import { useEffect, useState } from "react"
 
 
-
-export default function EventCities(){
- 
-    const [element,setelement] = useState([])
-    axios.get("localhost:3001/cities")
-    .then(res =>setelement (res.data))
-    console.log(element)
+// agregar el objeto del createcard aqui
+export default function EventCities({obj}){
     
-    }
+
+
+    
+}
