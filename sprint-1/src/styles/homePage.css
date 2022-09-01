@@ -1,0 +1,12 @@
+.titleCont{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+}
+
+.titleHome{
+    color: orangered;
+    margin: auto;
+    font-size: 25px;
+}
