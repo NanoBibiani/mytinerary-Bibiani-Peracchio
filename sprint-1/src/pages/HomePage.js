@@ -3,6 +3,7 @@
 import CallToAction from '../componentes/CallToAction';
 import EventCarousel from '../componentes/EventCarousel';
 import '../styles/carousel.css'
+import '../styles/homePage.css'
 
 export default function HomePage () {
     return (
@@ -18,8 +19,10 @@ export default function HomePage () {
         
         */
         
-      <>    
-
+      <>        
+                 <div className='titleCont'>
+                 <h2 className='titleHome'>Home Page</h2>
+                 </div>
                 <EventCarousel />
                 <div className='citiesButons'>
                 <CallToAction linkTo="/showcities" TextButon='See Cities' Clases ="button" ides='buttonShow'/>
