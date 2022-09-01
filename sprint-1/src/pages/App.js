@@ -18,6 +18,7 @@ import UnderConstruction from '../componentes/UnderConstruction';
 import ShowCities from '../componentes/ShowCities';
 import NewCities from '../componentes/NewCities';
 import NotFound from '../componentes/NotFound';
+import EditCity from './EditCity';
 function App() {
   return (
     <div className="App">
@@ -29,13 +30,15 @@ function App() {
           <SitioWebLayout>
           <Routes>
 
+              <Route path='/' element={<HomePage/>}/>
               <Route path='/home' element={<HomePage/>}/>
-              <Route path='/' element={<Welcome/>}/>
+              {/* <Route path='/' element={<Welcome/>}/> */}
               <Route path='/cities' element={<Cities/>}/>
               <Route path='/showcities' element={<ShowCities/>}/>
               <Route path='/newcities' element={<NewCities/>}/>
               <Route path='/under' element={<UnderConstruction/>}/>
               <Route path='/*' element={<NotFound/>}/>
+              <Route path='/EditCity' element={<EditCity/>}/>
         
           </Routes>
           </SitioWebLayout>
