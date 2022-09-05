@@ -1,10 +1,11 @@
 import CallToAction from "./CallToAction"
-import axios from "axios"
-import { useEffect, useState } from "react"
+
+
+import { useGetIdCityQuery } from "../features/cityApi"
 export default function Details(){
  
     
-    const [onlyId,setId]=useState({})
+  
 
     
     let id = window.location.search.split('?')
@@ -12,13 +13,12 @@ export default function Details(){
     
     let selectID = id[1]
     console.log(selectID)    
-    const ids = onlyId.response
+   
     
-    useEffect(()=>{
+    const {
+        data:elem,
 
-        axios.get(`http://localhost:3001/cities/${selectID}`)
-        .then(response => setId(response.data))
-    },[])
+    } = useGetIdCityQuery(selectID)
 
      let cityShow =(city)=>(
         <div className="cardDetails">
@@ -43,7 +43,9 @@ export default function Details(){
     return(
         <div className="Details">
 
-            {ids && cityShow(ids)}
+            {elem?
+            elem && cityShow(elem.response)
+        :''}
         </div>
         
     )

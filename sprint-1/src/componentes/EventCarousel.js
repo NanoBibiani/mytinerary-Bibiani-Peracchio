@@ -1,20 +1,19 @@
 import Carousel from "./Carousel"
-import axios from "axios"
-import { useEffect, useState } from "react"
+
+import { useGetAllCitiesQuery } from "../features/cityApi"
 export default function EventCarousel(){
-const [elem,setElem]=useState([])
+    const {
+        data:elem,
 
-useEffect(()=>{
-
-    axios.get("http://localhost:3001/cities")
-    .then(response => setElem(response.data))
-},[])
+    } = useGetAllCitiesQuery()
 
 return(
-    <div>
+   
+        elem?
         <Carousel data={elem}/>
+        :''
 
-    </div>
+  
 )
 
 }
