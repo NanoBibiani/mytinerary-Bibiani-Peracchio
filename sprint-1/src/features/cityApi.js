@@ -14,10 +14,13 @@ const ApiCities = createApi({
         }),
         GetIdCity : builder.query({
             query:(id)=>`/cities/${id}`
-        }) 
+        }),
+        GetFilterCity : builder.query({
+            query:(city)=>`/cities/?city=${city}`
+        })  
 
     })
 })
 
 export default ApiCities
-export  const {useGetAllCitiesQuery,useGetIdCityQuery} = ApiCities
+export  const {useGetAllCitiesQuery,useGetIdCityQuery, useGetFilterCityQuery} = ApiCities
