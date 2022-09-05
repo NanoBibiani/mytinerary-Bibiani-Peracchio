@@ -25,6 +25,7 @@ import Details from '../componentes/Details';
 import ShowDetails from '../componentes/ShowDetails';
 import FormCity from '../componentes/FormCity';
 import editCity from '../componentes/EditCity';
+
 function App() {
   return (
     <div className="App">
@@ -45,8 +46,7 @@ function App() {
               <Route path='/createcity' element={<FormCities/>}/>
               <Route path='/details' element={<ShowDetails/>}/>
               <Route path='/created' element={<FormCity/>}/>
-              <Route path='/edit' element={<editCity/>}/>
-                     
+              <Route path='/edit' element={<editCity/>}/>         
               <Route path='/*' element={<NotFound/>}/>
         
           </Routes>
