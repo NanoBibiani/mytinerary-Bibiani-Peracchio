@@ -5,19 +5,7 @@ import { useEffect } from "react"
 import CallToAction from "./CallToAction"
 export default function(props){
 const arr = props.data
-const myArr = JSON.stringify(arr);
-console.log(myArr)
-    useEffect(()=>{
-        axios.post(`http://localhost:3001/cities/`,myArr,{
-         headers:{
 
-             'Content-Type': 'application/json'
-         }    
-        
-            
-         })
-        .then(response => console.log(response.data)).catch(err =>console.log(err))
-      },[myArr])
 
 
     let cityShow =(city)=>(
@@ -40,7 +28,7 @@ console.log(myArr)
    
     return(
         <div className="showcities">
-        {arr&&cityShow(arr)}
+        {arr&&cityShow(arr)&&<h6>your city was created with succes</h6>}
         </div>
     )
 }

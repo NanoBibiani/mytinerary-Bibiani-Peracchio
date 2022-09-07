@@ -15,6 +15,7 @@ import '../styles/newcities.css'
 import '../styles/sigleCard.css'
 import '../styles/form.css'
 import '../styles/details.css'
+import '../styles/itineraries.css'
 import {BrowserRouter, Routes , Route} from 'react-router-dom'
 import UnderConstruction from '../componentes/UnderConstruction';
 import ShowCities from '../componentes/ShowCities';
@@ -25,7 +26,7 @@ import Details from '../componentes/Details';
 import ShowDetails from '../componentes/ShowDetails';
 import FormCity from '../componentes/FormCity';
 import editCity from '../componentes/EditCity';
-
+import Itineraries from '../componentes/Itinerary'
 function App() {
   return (
     <div className="App">
@@ -40,7 +41,7 @@ function App() {
               <Route path='/home' element={<HomePage/>}/>
               <Route path='/' element={<Welcome/>}/>
               <Route path='/cities' element={<Cities/>}/>
-       
+              <Route path='/itineraries' element={<Itineraries/>}/>
               <Route path='/newcities' element={<NewCities/>}/>
               <Route path='/under' element={<UnderConstruction/>}/>
               <Route path='/createcity' element={<FormCities/>}/>

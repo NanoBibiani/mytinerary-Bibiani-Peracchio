@@ -7,8 +7,10 @@ const ApiCities = createApi({
         baseUrl:"http://localhost:3001/"
 
     }),
+    tagTypes: ['Post'],
     endpoints: (builder)=>({
-        
+  ///////////////////Cities Get////////////////////////////////////////////////////
+       
         GetAllCities : builder.query({
             query :()=> '/cities'
         }),
@@ -17,10 +19,30 @@ const ApiCities = createApi({
         }),
         GetFilterCity : builder.query({
             query:(city)=>`/cities/?city=${city}`
-        })  
+        }),
+
+//////////////////Itineraries Get///////////////////////////////////////
+
+        GetAllItineraries : builder.query({
+            query :()=> '/itineraries'
+        }),
+
+
+
+
+ /////////////////Cities Post////////////////////////////////////////////////////       
+        addNewPost: builder.mutation({
+            query: (payload) => ({
+              url: '/cities',
+              method: 'POST',
+              body: payload,
+            }),          
+          }),
+
+
 
     })
 })
 
 export default ApiCities
-export  const {useGetAllCitiesQuery,useGetIdCityQuery, useGetFilterCityQuery} = ApiCities
+export  const {useGetAllCitiesQuery,useGetIdCityQuery, useGetFilterCityQuery,useAddNewPostMutation,useGetAllItinerariesQuery} = ApiCities

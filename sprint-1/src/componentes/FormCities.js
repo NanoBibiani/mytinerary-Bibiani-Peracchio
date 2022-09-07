@@ -1,5 +1,5 @@
-
-import { useState,useRef } from "react"
+import { useAddNewPostMutation } from "../features/cityApi"
+import { useState,useRef,useEffect } from "react"
 import FormCity from "./FormCity"
 export default function Formcities(){
     const[img,setImg]=useState()
@@ -56,36 +56,40 @@ const handleFunded = (e)=>{
 const handleCountry=(e)=>{
     setCountry(e.target.value)
 }
-console.log(inputElement)
+
+
+useEffect(()=>{
+    const card = {
+        photo:img,
+        city:city,
+        population:population,
+        fundation:funded,
+        country:Country
+    }
+  
+
+    setObj(card)
+
+},[img,city,population,funded,Country])
+
+
+const [addNewPost] = useAddNewPostMutation()
+
 const HandleSubmit = (e)=>{
     e.preventDefault()
-    let url;
-    try{
-        url=new URL(img)
-        if(population!=undefined && city!=undefined &&Country!=undefined&& funded != undefined &&url.protocol === "http:" || url.protocol === "https:"||url.protocol === "data:"){
-            inputElement.current.reset()
-            const card = {
-                photo:img,
-                city:city,
-                population:population,
-                fundation:funded,
-                country:Country
     
-            }
-            console.log(card)
-            setSubmit(true)
-            setObj(card)
-          
-            
-            
-        }
-    }catch(error){
-        alert("that url its invalid")
-        console.log(inputURL.current)
-    }
+    console.log(obj)
+
+    addNewPost(obj)
+     .unwrap()
+     .then(() => {})
+     .then((error) => {
+        console.log(error)
+     })
+    
+    setSubmit(true)
+
 }
-
-
 
 
 
@@ -100,13 +104,13 @@ const HandleSubmit = (e)=>{
                     <p>put the link of your image</p>
                     <input type="text" rel={inputURL}className="feedback-input" onChange={handleImg} ></input>
                     <p>Write the  City</p>
-                    <input type="text"className="feedback-input" onChange={handleCity}  ></input>
+                    <input type="text" minlength="3"  maxlength="10"className="feedback-input" onChange={handleCity}  ></input>
                     <p>Write the Country</p>
-                    <input type="text"className="feedback-input" onChange={handleCountry}  ></input>
+                    <input type="text" minlength="3"  maxlength="10"className="feedback-input" onChange={handleCountry}  ></input>
                     <p>write a population</p>
-                    <input type="text"className="feedback-input" onChange={handlePopulation}  ></input>
+                    <input type="number" minlength="3"  maxlength="4"className="feedback-input" onChange={handlePopulation}  ></input>
                     <p>write the year of funded</p>
-                    <input type="text" ref={inputFunded} className="feedback-input" onChange={handleFunded}  ></input>
+                    <input type="number"  minlength="3"  maxlength="4" ref={inputFunded} className="feedback-input" onChange={handleFunded}  ></input>
                     <button type="submit" linkTo={`/created`}>Create City</button>
                     
                 </form>
