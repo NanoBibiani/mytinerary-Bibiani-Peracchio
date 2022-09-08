@@ -1,19 +1,23 @@
-    import {useEffect, useState} from "react"
-
+import {useEffect, useState} from "react"
 export default function Carousel(prop){
-    
-    const arr = prop.data
+
+    const arr = prop.data.slice(0,12)
     console.log(prop)
     const [start , setStart]= useState([0]) //AGREGAR PROPS PARA MODIFICAR ESTADO DESDE COMPONENTE
     const [range , setRange]= useState([4]) //AGREGAR PROPS PARA MODIFICAR ESTADO DESDE COMPONENTE
 
 
-    const ItemShow =(item)=>(    
+    const ItemShow =(item)=>(
     <div>
-         <img src={item.photo}></img>
+            <a href={`/details?${item._id}`}>
+                 <img src={item.photo} ></img>
+            </a >
+
          <p>{item.city}</p>
-     </div>  
+     </div>
 )
+
+
 
 
  useEffect(()=>{
@@ -26,7 +30,7 @@ export default function Carousel(prop){
                     setRange(4)
                     setStart(0)
                 }
-            
+
         },3000)
         return()=>clearInterval(id)
 
@@ -37,17 +41,17 @@ export default function Carousel(prop){
 const next = ()=>{
     if(range<arr.length){
         setRange(parseInt(range)+4)
-        setStart(parseInt(start)+4)       
+        setStart(parseInt(start)+4)
     }
-    
+
 }
-const prev = ()=>{    
+const prev = ()=>{
     if(range<=arr.length && range != 0 && start != 0){
         setRange(parseInt(range)-4)
         setStart(parseInt(start)-4)
-    }   
+    }
 }
-  
+
     return(
             <div className="popularCities"><h1 >Popular Cities</h1>
             <div className ="slide">
