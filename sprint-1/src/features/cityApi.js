@@ -27,6 +27,9 @@ const ApiCities = createApi({
             query :()=> '/itineraries'
         }),
 
+        GetFilterItineraries : builder.query({
+            query:(city)=>`/itineraries/?city=${city}`
+        }),
 
 
 
@@ -40,9 +43,19 @@ const ApiCities = createApi({
           }),
 
 
+/////////////////////Activities Post//////////////////////////////////////////
+        
+        GetAllActivities: builder.query({
+            query: () => '/activities'
+        }),
+/////////////////////Comments Post//////////////////////////////////////////
+
+GetAllComments: builder.query({
+    query: () => '/comment'
+}),
 
     })
 })
 
 export default ApiCities
-export  const {useGetAllCitiesQuery,useGetIdCityQuery, useGetFilterCityQuery,useAddNewPostMutation,useGetAllItinerariesQuery} = ApiCities
+export  const {useGetAllCitiesQuery,useGetIdCityQuery, useGetFilterCityQuery,useAddNewPostMutation,useGetAllItinerariesQuery,useGetAllActivitiesQuery,useGetAllCommentsQuery,useGetFilterItinerariesQuery} = ApiCities

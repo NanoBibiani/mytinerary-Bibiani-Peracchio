@@ -16,6 +16,8 @@ import '../styles/sigleCard.css'
 import '../styles/form.css'
 import '../styles/details.css'
 import '../styles/itineraries.css'
+import '../styles/activities.css'
+import '../styles/comment.css'
 import {BrowserRouter, Routes , Route} from 'react-router-dom'
 import UnderConstruction from '../componentes/UnderConstruction';
 import ShowCities from '../componentes/ShowCities';
@@ -27,6 +29,8 @@ import ShowDetails from '../componentes/ShowDetails';
 import FormCity from '../componentes/FormCity';
 import editCity from '../componentes/EditCity';
 import Itineraries from '../componentes/Itinerary'
+import Activities from '../componentes/Activities'
+import Comments from '../componentes/Comments'
 function App() {
   return (
     <div className="App">
@@ -42,6 +46,8 @@ function App() {
               <Route path='/' element={<Welcome/>}/>
               <Route path='/cities' element={<Cities/>}/>
               <Route path='/itineraries' element={<Itineraries/>}/>
+              <Route path='/activities' element={<Activities/>}/>
+              <Route path='/comment' element={<Comments/>}/>
               <Route path='/newcities' element={<NewCities/>}/>
               <Route path='/under' element={<UnderConstruction/>}/>
               <Route path='/createcity' element={<FormCities/>}/>

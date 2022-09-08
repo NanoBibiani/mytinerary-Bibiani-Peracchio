@@ -17,18 +17,20 @@ const arr = props.data
         <div className="bodyCard">
             <h4 className="titleCard">{city.city}</h4>
             <p className="pCard">{city.country}</p>
-            <p className="priceCard">${city.fundation}</p>
-                 <CallToAction linkTo={`asd`} TextButon="Details" Clases="buttonBuy"/>
+            <p className="pCard">{city.population}</p>
+            <p className="priceCard">{city.fundation}</p>
+                 <CallToAction linkTo={'asd'} TextButon="City Created" Clases="buttonBuy"/>
         </div>
     </div>
     )
 
-    
 
-   
+
+
     return(
-        <div className="showcities">
-        {arr&&cityShow(arr)&&<h6>your city was created with succes</h6>}
+        <div className="showCreated">
+            <h1>City created successfully</h1>
+        {arr&&cityShow(arr)}
         </div>
     )
 }
