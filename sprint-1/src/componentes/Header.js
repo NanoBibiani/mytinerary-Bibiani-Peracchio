@@ -8,7 +8,7 @@ const pages = [
     {name: 'Home', to: '/home'},
     {name: 'Cities', to: '/cities'},
     {name: 'New Cities', to: '/newcities'},
-    /* {name: 'Contact', to: '/contact'}, */ // pagina de contaacto suma?
+    {name:'MyTineraries', to:'/itineraries'}
 ]
 
 const link = (page) => <li><LinkRouter className='Header-link' to={page.to} key={page.name}>{page.name}</LinkRouter></li>
