@@ -7,7 +7,7 @@ export default function NotFound (){
            <h4 className="underText">
              Page not Found 404
             </h4>
-            <CallToAction linkTo='/' TextButon='Go-back home' Clases ="button"/>
+            <CallToAction linkTo='/cities' TextButon='Go-back home' Clases ="button"/>
         </div>
     )
 }
