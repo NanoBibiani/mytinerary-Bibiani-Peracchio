@@ -32,3 +32,11 @@
 
   }
   [type="submit"]:hover { background:#CC4949; }
+
+  .showCreated{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 15px;
+}
