@@ -1,10 +1,12 @@
 .Details{
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    height: 64.5vh;
+    align-items: center;
 }
 
 .cardDetails{
+
     margin-top: 10px;
     margin-bottom: 10px;
     display: flex ;
@@ -51,4 +53,21 @@ height: 180px;
     }
     .buttonBuyDetails:hover{
         opacity: 1;
+    }
+
+    .bodyCardItiner{
+        display: flex;
+        gap: 20px;
+        align-items: baseline;
+
+
+    }
+
+    .titleIter{
+        background-color:rgb(141, 142, 82) ;
+        width: 100%;
+        text-align: center;
+        font-style: italic;
+        color: antiquewhite;
+        height:35px;
     }
