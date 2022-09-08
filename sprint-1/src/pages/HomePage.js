@@ -22,8 +22,8 @@ export default function HomePage () {
 
                 <EventCarousel />
                 <div className='citiesButons'>
-                <CallToAction linkTo="/showcities" TextButon='See Cities' Clases ="button" ides='buttonShow'/>
-                <CallToAction linkTo="/newcities" TextButon='Add new city' Clases ="button" ides='buttonShow'/>
+               
+                
                 </div>
             
         </>

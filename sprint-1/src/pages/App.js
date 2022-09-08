@@ -13,11 +13,24 @@ import '../styles/home.css'
 import '../styles/showcities.css'
 import '../styles/newcities.css'
 import '../styles/sigleCard.css'
+import '../styles/form.css'
+import '../styles/details.css'
+import '../styles/itineraries.css'
+import '../styles/activities.css'
+import '../styles/comment.css'
 import {BrowserRouter, Routes , Route} from 'react-router-dom'
 import UnderConstruction from '../componentes/UnderConstruction';
 import ShowCities from '../componentes/ShowCities';
 import NewCities from '../componentes/NewCities';
 import NotFound from '../componentes/NotFound';
+import FormCities from '../componentes/FormCities';
+import Details from '../componentes/Details';
+import ShowDetails from '../componentes/ShowDetails';
+import FormCity from '../componentes/FormCity';
+import editCity from '../componentes/EditCity';
+import Itineraries from '../componentes/Itinerary'
+import Activities from '../componentes/Activities'
+import Comments from '../componentes/Comments'
 function App() {
   return (
     <div className="App">
@@ -32,9 +45,15 @@ function App() {
               <Route path='/home' element={<HomePage/>}/>
               <Route path='/' element={<Welcome/>}/>
               <Route path='/cities' element={<Cities/>}/>
-              <Route path='/showcities' element={<ShowCities/>}/>
+              <Route path='/itineraries' element={<Itineraries/>}/>
+              <Route path='/activities' element={<Activities/>}/>
+              <Route path='/comment' element={<Comments/>}/>
               <Route path='/newcities' element={<NewCities/>}/>
               <Route path='/under' element={<UnderConstruction/>}/>
+              <Route path='/createcity' element={<FormCities/>}/>
+              <Route path='/details' element={<ShowDetails/>}/>
+              <Route path='/created' element={<FormCity/>}/>
+              <Route path='/edit' element={<editCity/>}/>         
               <Route path='/*' element={<NotFound/>}/>
         
           </Routes>

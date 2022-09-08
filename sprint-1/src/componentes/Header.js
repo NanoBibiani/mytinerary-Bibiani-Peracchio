@@ -8,10 +8,10 @@ const pages = [
     {name: 'Home', to: '/home'},
     {name: 'Cities', to: '/cities'},
     {name: 'New Cities', to: '/newcities'},
-    /* {name: 'Contact', to: '/contact'}, */ // pagina de contaacto suma?
+    {name:'MyTineraries', to:'/itineraries'}
 ]
 
-const link = (page) => <LinkRouter className='Header-link' to={page.to} key={page.name}>{page.name}</LinkRouter>
+const link = (page) => <li><LinkRouter className='Header-link' to={page.to} key={page.name}>{page.name}</LinkRouter></li>
 
 export default function Header() {
     const [open, setOpen] = useState(false)
@@ -26,12 +26,16 @@ export default function Header() {
 
     return (
         <div className="Header">
-            <div>
-              <img className = "logoViaje" src="http://localhost:3000/logosinfondo.png" alt="Logo"></img>
-              {/* <h2>JONAS</h2> */}
+            <div className='ProfileContainer'>
+                <img className='Usuario' src="http://localhost:3000/usuario.png" alt="usuario"></img>
+                <a className='ProfileLink' href="#">Profile</a>
+                <a className='ProfileLink' href="#">Log In</a>
             </div>
             <div className='Maping'>
             {pages.map(link)}
+            </div>
+            <div className='LogoContainer'>
+              <img className = "logoViaje" src="http://localhost:3000/logosinfondo.png" alt="Logo"></img>
             </div>
 
 
@@ -42,9 +46,9 @@ export default function Header() {
              <div className='ContenedorBurger'> 
                 {
                     open
-                        ? <ul className='LinkBurger'>
-                             <li>{pages.map(link)}</li>
-                        </ul>
+                        ? <div className='LinkBurger'>
+                             {pages.map(link)}
+                        </div>
                         : null
                 }
             </div>
